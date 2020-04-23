@@ -6,7 +6,7 @@ public class MethodsandReturningDataBackToTheMainProgram {
     public static void averages(double n2, double n3, double n4)
     {
         //Finding averages of 3 numbers
-        double aver = (n4 + n2 + n3)/3;
+        double aver = ( n2 + n3 + n4)/3;
         System.out.println("The averages is:"+ aver);
     }
     
@@ -89,15 +89,17 @@ public class MethodsandReturningDataBackToTheMainProgram {
         //create the scanner object to read input from the user
         Scanner keyInput = new Scanner(System.in);
         //variables required
-        double [] num = new double [4];
+        double [] num = new double [5];
         int num1;
+        int i = 0;
+        while(i == 0){
         //get the choice from the user
         System.out.println("Please enter a number from 1 to 5.");
         System.out.println("1: Finding averages of 3 numbers; 2: Finding acceleration; 3: Determining the power of a number;");
         System.out.println("4: Determining diameter, circumference of circle; 5: Finding missing angles for triangles;");
         System.out.println("6: Convert an angle in radians to an angle in degrees; 7: Keep two decimal places;");
         System.out.println("8: Determining if a number is prime; 9: Convert an angle in degrees to an angle in radians;");
-        System.out.println("10: Finding missing the hypotenuse of a triangle for triangles");
+        System.out.println("10: Finding missing the hypotenuse of a triangle for triangles; 11: End");
         num1 = keyInput.nextInt();
         //switch expression
         switch(num1){
@@ -166,6 +168,10 @@ public class MethodsandReturningDataBackToTheMainProgram {
                 num[3] = keyInput.nextDouble();
                 hypotenuse(num[2],num[3]);
                 break;
+            case 11:
+                i++;
+                break;
+        }
     }
     }
 }
